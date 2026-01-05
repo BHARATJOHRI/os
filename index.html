@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Top 50 Operating System Interview Questions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#020617;
+  --card:#0f172a;
+  --primary:#38bdf8;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#020617,#020617,#0f172a);
+  color:var(--text);
+  padding:20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+h1{
+  text-align:center;
+  color:var(--primary);
+  margin-bottom:30px;
+  font-size:clamp(2rem,3vw,2.8rem);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:14px;
+  padding:20px;
+  border:1px solid #1e293b;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(56,189,248,.25);
+}
+
+.q{
+  color:var(--primary);
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.question{
+  font-size:1.05rem;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.answer{
+  font-size:.95rem;
+  color:var(--muted);
+  line-height:1.6;
+  white-space:pre-line;
+}
+
+footer{
+  margin-top:40px;
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>Top 50 Operating System Interview Questions</h1>
+
+<div class="grid">
+
+<!-- 1 -->
+<div class="card"><div class="q">1</div><div class="question">What is an Operating System?</div><div class="answer">
+System software that manages hardware and software.
+Acts as interface between user and hardware.
+Handles process, memory, files, devices.
+Examples: Windows, Linux, macOS.
+</div></div>
+
+<!-- 2 -->
+<div class="card"><div class="q">2</div><div class="question">Main Functions of OS</div><div class="answer">
+Manages process, memory, files, I/O.
+Provides security and UI.
+Ensures efficient resource usage.
+Handles error recovery.
+</div></div>
+
+<!-- 3 -->
+<div class="card"><div class="q">3</div><div class="question">What is a Process?</div><div class="answer">
+Program in execution.
+Contains code, data, state.
+Has own resources.
+Scheduled by OS.
+</div></div>
+
+<!-- 4 -->
+<div class="card"><div class="q">4</div><div class="question">What is a Thread?</div><div class="answer">
+Lightweight process unit.
+Multiple threads per process.
+Shares resources.
+Improves performance.
+</div></div>
+
+<!-- 5 -->
+<div class="card"><div class="q">5</div><div class="question">Process vs Thread</div><div class="answer">
+Process: Own memory, heavy.
+Thread: Shared memory, light.
+Thread switching is faster.
+</div></div>
+
+<!-- 6 -->
+<div class="card"><div class="q">6</div><div class="question">What is Multitasking?</div><div class="answer">
+Multiple programs run together.
+CPU switches rapidly.
+Improves efficiency.
+Used in modern OS.
+</div></div>
+
+<!-- 7 -->
+<div class="card"><div class="q">7</div><div class="question">What is Multiprocessing?</div><div class="answer">
+Uses multiple CPUs/cores.
+Parallel execution.
+High performance.
+Used in servers.
+</div></div>
+
+<!-- 8 -->
+<div class="card"><div class="q">8</div><div class="question">What is Multithreading?</div><div class="answer">
+Multiple threads in process.
+Runs concurrently.
+Better CPU utilization.
+Used in browsers.
+</div></div>
+
+<!-- 9 -->
+<div class="card"><div class="q">9</div><div class="question">What is Scheduling?</div><div class="answer">
+Decides next process execution.
+Handled by scheduler.
+Improves CPU efficiency.
+Uses algorithms.
+</div></div>
+
+<!-- 10 -->
+<div class="card"><div class="q">10</div><div class="question">Scheduling Algorithm</div><div class="answer">
+Decides execution order.
+Examples: FCFS, SJF, RR.
+Affects waiting & turnaround.
+Ensures fairness.
+</div></div>
+
+<!-- 11 -->
+<div class="card"><div class="q">11</div><div class="question">FCFS Scheduling</div><div class="answer">
+First come first serve.
+Simple to implement.
+Long waiting time.
+Not efficient always.
+</div></div>
+
+<!-- 12 -->
+<div class="card"><div class="q">12</div><div class="question">SJF Scheduling</div><div class="answer">
+Shortest job executes first.
+Minimum average waiting.
+Preemptive/non-preemptive.
+Burst time hard to predict.
+</div></div>
+
+<!-- 13 -->
+<div class="card"><div class="q">13</div><div class="question">Round Robin</div><div class="answer">
+Fixed time slice.
+Equal CPU time.
+No starvation.
+Time-sharing systems.
+</div></div>
+
+<!-- 14 -->
+<div class="card"><div class="q">14</div><div class="question">Priority Scheduling</div><div class="answer">
+Based on priority.
+Higher priority runs first.
+May cause starvation.
+</div></div>
+
+<!-- 15 -->
+<div class="card"><div class="q">15</div><div class="question">Starvation</div><div class="answer">
+Process never gets CPU.
+Low priority suffers.
+Solved using aging.
+</div></div>
+
+<!-- 16 -->
+<div class="card"><div class="q">16</div><div class="question">Aging</div><div class="answer">
+Priority increases over time.
+Prevents starvation.
+Ensures fairness.
+</div></div>
+
+<!-- 17 -->
+<div class="card"><div class="q">17</div><div class="question">Deadlock</div><div class="answer">
+Processes wait forever.
+Resources never released.
+System halts.
+</div></div>
+
+<!-- 18 -->
+<div class="card"><div class="q">18</div><div class="question">Deadlock Conditions</div><div class="answer">
+Mutual exclusion.
+Hold & wait.
+No preemption.
+Circular wait.
+</div></div>
+
+<!-- 19 -->
+<div class="card"><div class="q">19</div><div class="question">Deadlock Prevention</div><div class="answer">
+Avoid one condition.
+Restricts resources.
+Safe but inefficient.
+</div></div>
+
+<!-- 20 -->
+<div class="card"><div class="q">20</div><div class="question">Deadlock Avoidance</div><div class="answer">
+Predicts deadlock.
+Uses Banker’s algorithm.
+Needs prior info.
+</div></div>
+
+<!-- 21 -->
+<div class="card"><div class="q">21</div><div class="question">Banker’s Algorithm</div><div class="answer">
+Avoids deadlock.
+Checks safe state.
+Needs max resource info.
+</div></div>
+
+<!-- 22 -->
+<div class="card"><div class="q">22</div><div class="question">Memory Management</div><div class="answer">
+Allocates/deallocates memory.
+Avoids leaks.
+Ensures efficiency.
+</div></div>
+
+<!-- 23 -->
+<div class="card"><div class="q">23</div><div class="question">Paging</div><div class="answer">
+Fixed-size pages.
+No external fragmentation.
+Uses page table.
+</div></div>
+
+<!-- 24 -->
+<div class="card"><div class="q">24</div><div class="question">Segmentation</div><div class="answer">
+Logical segments.
+Variable size.
+Matches program logic.
+</div></div>
+
+<!-- 25 -->
+<div class="card"><div class="q">25</div><div class="question">Paging vs Segmentation</div><div class="answer">
+Paging: fixed blocks.
+Segmentation: variable blocks.
+Paging avoids external fragmentation.
+</div></div>
+
+<!-- 26 -->
+<div class="card"><div class="q">26</div><div class="question">Virtual Memory</div><div class="answer">
+Uses disk as RAM.
+Runs large programs.
+Implemented using paging.
+</div></div>
+
+<!-- 27 -->
+<div class="card"><div class="q">27</div><div class="question">Thrashing</div><div class="answer">
+Excessive swapping.
+Low CPU usage.
+Due to low memory.
+</div></div>
+
+<!-- 28 -->
+<div class="card"><div class="q">28</div><div class="question">Page Fault</div><div class="answer">
+Page not in memory.
+Loaded from disk.
+Increases execution time.
+</div></div>
+
+<!-- 29 -->
+<div class="card"><div class="q">29</div><div class="question">Fragmentation</div><div class="answer">
+Wasted memory.
+Internal & external types.
+Reduces efficiency.
+</div></div>
+
+<!-- 30 -->
+<div class="card"><div class="q">30</div><div class="question">File System</div><div class="answer">
+Organizes data.
+Manages files/directories.
+Example: NTFS, FAT.
+</div></div>
+
+<!-- 31 -->
+<div class="card"><div class="q">31</div><div class="question">Directory</div><div class="answer">
+Stores file info.
+Organizes files.
+Improves access.
+</div></div>
+
+<!-- 32 -->
+<div class="card"><div class="q">32</div><div class="question">I/O Management</div><div class="answer">
+Manages devices.
+Uses drivers.
+Handles buffering/caching.
+</div></div>
+
+<!-- 33 -->
+<div class="card"><div class="q">33</div><div class="question">Buffering</div><div class="answer">
+Temporary storage.
+Smooth data flow.
+Improves speed.
+</div></div>
+
+<!-- 34 -->
+<div class="card"><div class="q">34</div><div class="question">Spooling</div><div class="answer">
+Disk-based buffering.
+Used for printers.
+Improves CPU use.
+</div></div>
+
+<!-- 35 -->
+<div class="card"><div class="q">35</div><div class="question">Context Switching</div><div class="answer">
+Saves process state.
+Switches CPU.
+Adds overhead.
+</div></div>
+
+<!-- 36 -->
+<div class="card"><div class="q">36</div><div class="question">Kernel</div><div class="answer">
+Core of OS.
+Controls hardware.
+Runs in privileged mode.
+</div></div>
+
+<!-- 37 -->
+<div class="card"><div class="q">37</div><div class="question">Types of Kernel</div><div class="answer">
+Monolithic.
+Microkernel.
+Hybrid.
+</div></div>
+
+<!-- 38 -->
+<div class="card"><div class="q">38</div><div class="question">System Call</div><div class="answer">
+Interface to OS services.
+Runs in kernel mode.
+File & process ops.
+</div></div>
+
+<!-- 39 -->
+<div class="card"><div class="q">39</div><div class="question">User vs Kernel Mode</div><div class="answer">
+User: limited access.
+Kernel: full access.
+Ensures safety.
+</div></div>
+
+<!-- 40 -->
+<div class="card"><div class="q">40</div><div class="question">Semaphore</div><div class="answer">
+Synchronization tool.
+Controls shared resources.
+Prevents race condition.
+</div></div>
+
+<!-- 41 -->
+<div class="card"><div class="q">41</div><div class="question">Mutex</div><div class="answer">
+Mutual exclusion.
+One thread at a time.
+Used in critical section.
+</div></div>
+
+<!-- 42 -->
+<div class="card"><div class="q">42</div><div class="question">Synchronization</div><div class="answer">
+Coordinates processes.
+Avoids inconsistency.
+Essential in concurrency.
+</div></div>
+
+<!-- 43 -->
+<div class="card"><div class="q">43</div><div class="question">Race Condition</div><div class="answer">
+Simultaneous access.
+Unpredictable result.
+Needs synchronization.
+</div></div>
+
+<!-- 44 -->
+<div class="card"><div class="q">44</div><div class="question">Critical Section</div><div class="answer">
+Shared resource code.
+One process at a time.
+Uses lock/mutex.
+</div></div>
+
+<!-- 45 -->
+<div class="card"><div class="q">45</div><div class="question">Booting</div><div class="answer">
+System startup.
+Loads OS.
+Cold & warm boot.
+</div></div>
+
+<!-- 46 -->
+<div class="card"><div class="q">46</div><div class="question">Interrupt</div><div class="answer">
+Stops current task.
+Handles urgent events.
+Hardware/software.
+</div></div>
+
+<!-- 47 -->
+<div class="card"><div class="q">47</div><div class="question">Polling</div><div class="answer">
+Repeated checking.
+CPU waits actively.
+Inefficient.
+</div></div>
+
+<!-- 48 -->
+<div class="card"><div class="q">48</div><div class="question">Time Sharing System</div><div class="answer">
+Multiple users.
+CPU time sliced.
+Responsive system.
+</div></div>
+
+<!-- 49 -->
+<div class="card"><div class="q">49</div><div class="question">Distributed OS</div><div class="answer">
+Multiple systems.
+Appears single.
+High reliability.
+</div></div>
+
+<!-- 50 -->
+<div class="card"><div class="q">50</div><div class="question">Why OS Important?</div><div class="answer">
+Manages resources.
+Provides UI.
+Ensures security & stability.
+</div></div>
+
+</div>
+
+<footer>© 2026 | OS Interview Notes | Designed for Developers</footer>
+
+</div>
+</body>
+</html>
